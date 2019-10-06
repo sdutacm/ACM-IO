@@ -11,6 +11,7 @@
 当我们在本地运行程序时，会出现一个可以获取我们输入、打印程序输出的终端窗口。我们输入到终端窗口的内容会通过标准输入流（以下简称为 `stdin`）传递到程序，而程序输出的内容会通过标准输出流（以下简称为 `stdout`）显示到终端，这之中进行连接的就是管道（`pipe`）。
 
 <p align="center">
+    <img src="images/hello.png" width="50%">
     <img src="images/example.png" width="50%">
 </p>
 
@@ -53,4 +54,49 @@ int main() {
 print("Hello World!")
 ```
 
-OJ 系统会获取到我们代码程序的输出，将其与答案文件进行对比（一般是逐字节进行比对）。如果经过对比后，系统认为答案正确，则用户提交的代码将会被判断为正确（`Accepted`）。
+OJ 系统会获取到我们代码程序的输出，将其与答案文件进行对比（一般是逐字节进行比对）。如果经过对比后，系统认为答案正确，则用户提交的代码将会被判断为正确（`Accepted`）。如果对评测系统的评测原理感兴趣的话，可以看一下[《OnlineJudge 评测原理与常见问题解答》](https://meik2333.com/2018/12/14/OnlineJudge-%E8%AF%84%E6%B5%8B%E5%8E%9F%E7%90%86%E4%B8%8E%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/)
+。
+
+#### 只有一组输入与输出
+
+示例题目：[SDUTOJ 1000](https://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Index/problemdetail/pid/1000.html)。
+
+在这个题目中，我们需要从 stdin 中读取两个数字的值，并将这两个数字之和写入到 stdout 中。
+
+**C**
+
+```c
+#include <stdio.h>
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d\n", a + b);
+    return 0;
+}
+```
+
+**C++**
+
+```cpp
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b;
+    cin >> a >> b;
+    cout << a + b << endl;
+    return 0;
+}
+```
+
+**Python**
+
+```python
+a, b = input().split()
+print(int(a) + int(b))
+```
+
+## 给定组数的多组输入输出
+
+## 输入直到文件读取结束
+
+## 字符串的输入输出
