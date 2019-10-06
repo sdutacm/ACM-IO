@@ -61,7 +61,7 @@ OJ 系统会获取到我们代码程序的输出，将其与答案文件进行�
 
 示例题目：[SDUTOJ 1000](https://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Index/problemdetail/pid/1000.html)。
 
-在这个题目中，我们需要从 stdin 中读取两个数字的值，并将这两个数字之和写入到 stdout 中。
+在这个题目中，我们需要从 `stdin` 中读取两个数字的值，并将这两个数字之和写入到 `stdout` 中。
 
 **C**
 
